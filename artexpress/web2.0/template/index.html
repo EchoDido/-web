@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>艺术头条app,艺术资讯,艺术展览,艺术家公开课,艺术动态--雅昌艺术网</title>
+    <meta name="description" content="艺术头条是一款艺术类资讯阅读应用，生产、聚合国内外知名艺术媒体的新闻内容，向用户推送包括新闻、图片、视频等在内的新鲜艺术资讯，以极具纵深力的艺术新闻发现思维，解构艺术事件，让用户及时了解艺术动态。同时，艺术头条拥有语音播报、视频新闻、同步收藏等功能，并可根据每个用户的兴趣、浏览偏好等特点进行智能推荐，实现精准新闻推送，带给用户个性化体验，是获取艺术资讯不可或缺的掌上工具。">
+    <meta name="keywords" content="艺术头条官网,艺术头条app,艺术头条app下载,艺术资讯,艺术展览,艺术家公开课">
+    <link rel="stylesheet" href="../resource/web/css/style2.css">
+    <script src="../resource/web/js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var t1,enter,t2,t3,index,mt,
+                oBtns=$(".iBtn");
+            !t2&&initInterval(); //防止重复定时
+            function getMarginTop(obj) {
+                var winH =  $(window).height(),
+                    oBtn = obj;
+                if(winH<620){
+                    switch (oBtn.attr("id")){
+                        case "i1" : mt = 90
+                            break;
+                        case "i2" : mt = 110
+                            break;
+                        default : mt = 70
+                            break;
+                    }
+                }else {
+                    mt = 40;
+                }
+                return mt;
+            }
+            function initInterval(){
+                t2 = setInterval(function(){intervalFun()},2000);
+            };
+            function intervalFun() {
+                index = 0;
+                clearInterval(t2);
+                t3 = setInterval(function () {
+                    oBtns.eq(index).find(".iBtnBox").addClass("iBtnBoxH");
+                    oBtns.eq(index).find(".tag").hide();
+                    oBtns.eq(index).siblings(".iBtn").find(".iBtnBox").removeClass("iBtnBoxH");
+                    setTimeout(function () {
+                        oBtns.eq(index-1).find(".iBtnBox").removeClass("iBtnBoxH");
+                    },699);
+                    if(index>3){
+                        index=-1;
+                    }
+                    index++;
+                },2500);
+//                    for(var i=0,oBtns=$(".iBtn");i<oBtns.length;i++){
+//                        (function (index) {
+//                            oBtns.time = index*1500;
+//                            t3 = setTimeout(function () {
+//                                oBtns.eq(index).addClass("iBtnH").find(".tag").hide();
+//                                oBtns.eq(index).siblings(".iBtn").removeClass("iBtnH");
+//                                t4 = setTimeout(function () {
+//                                    oBtns.eq(index).removeClass("iBtnH");
+//                                },1500);
+//                            },oBtns.time);
+//                        })(i);
+//                    }
+            }
+            function poseInterval() {
+                t2&&(!clearInterval(t2))&&(t2=0);
+                t3&&(!clearInterval(t3))&&(t3=0);
+            }
+            $('.openCode').hover(function () {
+                $(".iBtn").removeClass("iBtnH").find(".iBtnBox").removeClass("iBtnBoxH");
+                $(".mask2").show().stop().animate({
+                    opacity: ".7"
+                }, 299);
+               $('.codeBox').show().stop().animate({
+                   opacity: "1"
+               }, 299);
+                poseInterval();
+            },function () {
+                $(".mask2").stop().animate({
+                    opacity: "0"
+                }, 299,function () {
+                    $(".mask2").hide();
+                });
+                $('.codeBox').stop().animate({
+                    opacity: "0"
+                }, 299,function () {
+                    $('.codeBox').hide();
+                    !t2&&initInterval(); //防止重复定时
+
+                });
+            });
+            $('.openWrite').mouseenter(function () {
+                $(".iBtn").removeClass("iBtnH").find(".iBtnBox").removeClass("iBtnBoxH");
+                $(".mask2").show().stop().animate({
+                    opacity: ".7"
+                }, 299);
+                $('.writeBox').show().stop().animate({
+                    opacity: "1"
+                }, 299);
+                poseInterval();
+            });
+            $('.closeBtn').click(function () {
+                $(".mask2").stop().animate({
+                    opacity: "0"
+                }, 299,function () {
+                    $(".mask2").hide();
+                });
+                $('.writeBox').stop().animate({
+                    opacity: "0"
+                }, 299,function () {
+                    $('.writeBox').hide();
+                    !t2&&initInterval(); //防止重复定时
+
+                });
+            });
+            $('.closeBtn').hover(function () {
+                $(this).addClass("closeBtnH");
+            },function () {
+                $(this).removeClass("closeBtnH")
+            });
+            $('.iBtnBox').hover(function() {
+                poseInterval();
+                enter = true;
+                var self = $(this),
+                        iHeight = self.find(".sumBox").height(),
+                        id = self.closest(".iBtn").attr("id"),
+                        bottomH = self.find(".applyBtn").length ? 50 : 35,
+                        mLeft;
+                $(".mask").show().stop().animate({
+                    opacity: ".7"
+                }, 3000);
+                self.closest(".iBtn").addClass("iBtnH").siblings(".iBtn").removeClass("iBtnH").find(".iBtnBox").removeClass("iBtnBoxH");
+                self.closest(".iBtn").find(".tag").show();
+                t1 = setTimeout(function () {
+                    self.find("i").stop().animate({
+                        opacity:"0"
+                    },200, function () {
+                        self.find("i").hide();
+                        if (enter) {
+                            if(!self.closest(".iBtn").hasClass("iBtnH")){
+                                self.closest(".iBtn").addClass("iBtnH").find(".tag").show();
+                            }
+                            if(!$(".mask:visible").length){
+                                $(".mask").show().stop().animate({
+                                    opacity: ".7"
+                                }, 299);
+                            }
+                            self.stop().animate({
+                                width: "490px",
+                                borderTopLeftRadius: 9,
+                                borderTopRightRadius: 9,
+                                borderBottomLeftRadius: 9,
+                                borderBottomRightRadius: 9,
+                                WebkitBorderTopLeftRadius: 9,
+                                WebkitBorderTopRightRadius: 9,
+                                WebkitBorderBottomLeftRadius: 9,
+                                WebkitBorderBottomRightRadius: 9,
+                                MozBorderRadius: 9
+                            }, 1000, function () {
+                                self.stop().animate({
+                                    paddingTop: "35px",
+                                    height: iHeight + bottomH
+                                }, 1000);
+                                self.closest(".iBtn").stop().animate({
+                                        marginTop: getMarginTop(self.closest(".iBtn"))+"px"
+
+                                }, 1000, function () {
+                                    self.find(".summary").stop().animate({
+                                        opacity: "1"
+                                    }, 500);
+                                });
+                            });
+                            self.closest(".iBtn").stop().animate({
+                                width: "490px",
+                                margin:"0 55px 0 3px"
+                            }, 1000);
+                            switch (id) {
+                                case "i1":
+                                    mLeft = "-4796px";
+                                    break;
+                                case "i2":
+                                    mLeft = "-4926px";
+                                    break;
+                                case "i3":
+                                    mLeft = "-5082px";
+                                    break;
+                                case "i4":
+                                    mLeft = "-5204px";
+                                    break;
+                            }
+                            $(".intro").stop().animate({
+                                marginLeft: mLeft
+                            }, 1000);
+                        }
+                    });
+
+                }, 299);
+            },function(){
+                enter = false;
+                clearTimeout(t1);
+                var self = $(this);
+                !t2&&initInterval(); //防止重复定时造成定时混乱
+                if($(this).width()==82){
+                    $(".mask").stop().animate({
+                        opacity:"0"
+                    },299,function () {
+                        $(this).hide();
+                    });
+                    self.find("i").show().stop().animate({
+                        opacity:".41"
+                    },200,function () {
+                        self.closest(".iBtn").removeClass("iBtnH").find(".iBtnBox").removeClass("iBtnBoxH");
+                    });
+                    return false;
+                }
+                $(this).stop().animate({
+                        width: "82px",
+                        height: "55px",
+                        paddingTop: "27px",
+                        borderTopLeftRadius: 41,
+                        borderTopRightRadius: 41,
+                        borderBottomLeftRadius: 41,
+                        borderBottomRightRadius: 41,
+                        WebkitBorderTopLeftRadius: 41,
+                        WebkitBorderTopRightRadius: 41,
+                        WebkitBorderBottomLeftRadius: 41,
+                        WebkitBorderBottomRightRadius: 41,
+                        MozBorderRadius: 41
+                    },1000,function () {
+                        $(".mask").stop().animate({
+                            opacity:"0"
+                        },299,function () {
+                            $(this).hide();
+                        });
+                        self.find("i").show().stop().animate({
+                            opacity:".41"
+                        },200,function () {
+                            self.closest(".iBtn").removeClass("iBtnH").find(".iBtnBox").removeClass("iBtnBoxH");
+                        });
+                    });
+                self.find(".summary").stop().animate({
+                    opacity:"0"
+                },300);
+                self.closest(".iBtn").stop().animate({
+                    width: "134px",
+                    margin:"0 15px"
+                },1000);
+                $(".intro").stop().animate({
+                    marginLeft : "-5000px"
+                },1000);
+            });
+
+        })
+
+    </script>
+</head>
+<body>
+    <div class="main">
+        <a class="cBtn openCode">下载</a>
+        <a class="cBtn openWrite">写文章</a>
+        <div class="popBox codeBox">
+            <div class="code"><img src="../resource/web/imgs/code.png" alt="二维码"></div>
+            <span class="tag">扫码下载客户端</span>
+        </div>
+        <div class="popBox writeBox">
+            <b class="closeBtn"></b>
+            <div class="code summary">
+                <p>以开放自由的媒体平台资源</p>
+                <p>分享艺术见识，人人都可以成为媒体人</p>
+                <p>让整个艺术圈听到你的声音</p>
+                <a href="http://write.artron.net/" target="_blank" class="applyBtn enter">点击进入</a>
+            </div>
+            <span class="tag">进入艺术头条公众号</span>
+        </div>
+        <div class="bg bg1"></div><div class="bg bg2"></div><div class="bg bg3"></div><div class="bg bg4"></div><div class="bg bg5"></div>
+        <h1 class="logo">艺术头条 你的艺术雷达</h1>
+        <div class="intro">
+            <div class="mask"></div>
+            <div class="mask2"></div>
+            <div id="i1" class="iBtn">
+                <div class="iBtnBox">
+                    <i></i>
+                    <div class="summary">
+                        <div class="sumBox">
+                            <p>以极具深度的新闻发现思维</p>
+                            <p>生产并聚合国内外艺术媒体的优质内容</p>
+                            <p>智能推送，订阅艺术号媒体</p>
+                            <p>拥有个人专属艺术资讯</p>
+                        </div>
+                    </div>
+                </div>
+                <span class="tag">艺术阅读应用</span>
+            </div><div id="i2" class="iBtn">
+                <div class="iBtnBox">
+                    <i></i>
+                    <div class="summary">
+                        <div class="sumBox">
+                            <p>以开放自由的媒体平台资源</p>
+                            <p>分享艺术见识，人人都可以成为媒体人</p>
+                            <p>让整个艺术圈听到你的声音</p>
+                            <a href="http://write.artron.net/" target="_blank" class="applyBtn">申请艺术号　入驻成为媒体</a>
+                        </div>
+                    </div>
+                </div>
+                <span class="tag">艺术号自媒体</span>
+            </div><div id="i3" class="iBtn">
+                <div class="iBtnBox">
+                    <i></i>
+                    <div class="summary">
+                        <div class="sumBox">
+                            <p>便捷搜索，精准定位</p>
+                            <p>汇聚最全的展览信息</p>
+                            <p>发现你身边的展，发现你内心的展</p>
+                        </div>
+                    </div>
+                </div>
+                <span class="tag">发现内心的展</span>
+            </div><div id="i4" class="iBtn">
+                <div class="iBtnBox">
+                    <i></i>
+                    <div class="summary">
+                        <div class="sumBox">
+                            <p>权威名师讲解，专业艺术课堂</p>
+                            <p>随时随地上名师公开课</p>
+                            <p>带你领略名师风采，走进艺术世界</p>
+                        </div>
+                    </div>
+                </div>
+                <span class="tag">雅昌公开课</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">Copyright Reserved 2000-2017 雅昌艺术网 版权所有</div>
+    <div class="screenTop"></div>
+    <div class="screenBot"></div>
+    <!--统计代码 begin -->
+    <script type='text/javascript'>
+        var _vds = _vds || [];
+        window._vds = _vds;
+        (function(){
+            _vds.push(['setAccountId', '276fdc71b3c353173f111df9361be1bb']);
+            (function() {
+                var vds = document.createElement('script');
+                vds.type='text/javascript';
+                vds.async = true;
+                vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(vds, s);
+            })();
+        })();
+    </script>
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F851619594aa1d1fb8c108cde832cc127' type='text/javascript'%3E%3C/script%3E"));
+    </script><!--统计代码 end-->
+</body>
+</html>
+

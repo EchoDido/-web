@@ -1,7 +1,12 @@
 ### 一、需求
 要求同时固定表头和操作栏，方便用户操作。
+<<<<<<< HEAD
 ![布局](/Users/zjl/Desktop/study/git/-web/tablescroll/resource/images/finish.gif) 
 
+=======
+![效果](http://upload-images.jianshu.io/upload_images/7226169-eb5c1c78f4852ba2.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)       
+ 
+>>>>>>> e7985aa79a86a84e40e9cba3b0a406dc4a7a68a5
 ### 二、实现思路
 1. js控制表格宽高自适应，溢出滚动
 2. 表头、操作栏独立放置，表头横向溢出滚动，纵向溢出隐藏，操作栏纵向溢出滚动，横向溢出隐藏
@@ -41,7 +46,7 @@ $(".page-table-fixed-scroll").scroll(function (event) {
 ###### 解决思路：
 1. 区分表格横向纵向滚动，减少冗余
 2. 通过鼠标滑过事件判断当前滚动区域触发是否为用户主动触发，鼠标滑过当前区域时，认为当前区域滚动事件为主动触发。如果是被动触发（即跟随滚动）则不再反向触发滚动。
-<br>
+
 ##### 2. 改进方法
 
 ```javascript

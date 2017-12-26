@@ -1,6 +1,6 @@
 ### 一、需求
 要求同时固定表头和操作栏，方便用户操作。
-![布局](/Users/zjl/Desktop/study/git/-web/tablescroll/resource/images/finish.gif) 
+![效果](resource/images/finish.gif) 
 
 ### 二、实现思路
 1. js控制表格宽高自适应，溢出滚动
@@ -8,7 +8,7 @@
 3. 表格滚动时同步滚动表头和操作栏
 
 ### 三、布局
-![布局](http://upload-images.jianshu.io/upload_images/7226169-318eeb5aa64e7712.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![布局](resource/images/layout.png)
 
 ### 四、实现过程
 ###### 1. 传统方法监听滚动并实现同步滚动（这是最容易想到，也是网上最常见的同步滚动实现方法）

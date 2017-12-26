@@ -1,15 +1,15 @@
 ### 一、需求
 要求同时固定表头和操作栏，方便用户操作。
 ![效果](http://upload-images.jianshu.io/upload_images/7226169-eb5c1c78f4852ba2.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)       
-<br>   
+ 
 ### 二、实现思路
 1. js控制表格宽高自适应，溢出滚动
 2. 表头、操作栏独立放置，表头横向溢出滚动，纵向溢出隐藏，操作栏纵向溢出滚动，横向溢出隐藏
 3. 表格滚动时同步滚动表头和操作栏
-<br>
+
 ### 三、布局
 ![布局](http://upload-images.jianshu.io/upload_images/7226169-318eeb5aa64e7712.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-<br>
+
 ### 四、实现过程
 ###### 1. 传统方法监听滚动并实现同步滚动（这是最容易想到，也是网上最常见的同步滚动实现方法）
 ```javascript
@@ -41,7 +41,7 @@ $(".page-table-fixed-scroll").scroll(function (event) {
 ###### 解决思路：
 1. 区分表格横向纵向滚动，减少冗余
 2. 通过鼠标滑过事件判断当前滚动区域触发是否为用户主动触发，鼠标滑过当前区域时，认为当前区域滚动事件为主动触发。如果是被动触发（即跟随滚动）则不再反向触发滚动。
-<br>
+
 ##### 2. 改进方法
 
 ```javascript

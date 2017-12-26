@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>【表格】固定表头及操作栏</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="resource/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="resource/js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="resource/css/admin.css" />
+</head>
+<body>
+<div class="main-container" id="main-container">
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <div class="main-content">
+            <div class="page-content">
+            <div class="page-table-content">
+                <div class="page-table-header">
+                    <div class="page-table-header-scroll disScroll">
+                        <div class="page-table-body" style="width:1470px;">
+                            <table class="table table-bordered" style="width:1470px;">
+                                <tr>
+                                    <th class="list-pic">图片</th>
+                                    <th class="list-id">专场ID</th>
+                                    <th class="list-account">账号</th>
+                                    <th class="list-name">专场名称</th>
+                                    <th class="list-class">分类</th>
+                                    <th class="list-time" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1">预展时间</th>
+                                    <th class="list-time" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1">拍卖时间</th>
+                                    <th class="list-number" role="columnheader" tabindex="0" aria-controls="sample-table-2" rowspan="1" colspan="1">拍品数量</th>
+                                    <th class="list-status">拍卖状态</th>
+                                    <th class="list-status">审核状态</th>
+                                    <th class="list-status">排期状态</th>
+                                    <th class="list-status">显示状态</th>
+                                    <th class="list-modify">&nbsp;</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-table-scroll page-table-body-scroll disScroll">
+                    <div class="page-table-body" style="width:1470px;">
+                        <table class="table table-striped table-bordered table-hover dataTable">
+                            <tbody>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/1.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">539</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">wqew</td>
+                                <td class="list-class">陶瓷紫砂</td>
+                                <!--                                    <td class="list-class">陶瓷紫砂,高古瓷器</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/2.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">533</td>
+                                <td class="list-account"></td>
+                                <td class="list-name">在家呢</td>
+                                <td class="list-class"></td>
+                                <!--                                    <td class="list-class">古典家具</td>-->
+                                <td class="list-time"><p>开始 2017-12-21 06:05</p><p>结束 2017-12-22 06:50</p></td>
+                                <td class="list-time"><p>开始 2017-12-22 06:50</p><p>结束 2017-12-28 11:55</p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">审核通过</td>
+                                <td class="list-status">已排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/3.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">522</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">123</td>
+                                <td class="list-class">陶瓷紫砂</td>
+                                <!--                                    <td class="list-class">陶瓷紫砂,高古瓷器</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">7</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/1.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">521</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">123</td>
+                                <td class="list-class">邮品钱币</td>
+                                <!--                                    <td class="list-class">邮品钱币,邮品,钱币</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/2.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">519</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">123</td>
+                                <td class="list-class">古典家具</td>
+                                <!--                                    <td class="list-class">古典家具,</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/3.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">518</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">123</td>
+                                <td class="list-class">陶瓷紫砂</td>
+                                <!--                                    <td class="list-class">陶瓷紫砂,高古瓷器</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/1.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">517</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">2131</td>
+                                <td class="list-class">古典家具</td>
+                                <!--                                    <td class="list-class">古典家具,</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/2.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">516</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">hello</td>
+                                <td class="list-class">古典家具</td>
+                                <!--                                    <td class="list-class">古典家具,</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/3.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">515</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">123213</td>
+                                <td class="list-class">古典家具</td>
+                                <!--                                    <td class="list-class">古典家具,</td>-->
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-time"><p>开始 </p><p>结束 </p></td>
+                                <td class="list-number">0</td>
+                                <td class="list-status"></td>
+                                <td class="list-status">未提审</td>
+                                <td class="list-status">未排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                
+                                <td class="list-pic">
+                                    <div class="proPic">
+                                        <span><img src="resource/images/1.jpg" width="60" height="60"/></span>
+                                    </div>
+                                </td>
+                                <td class="list-id">513</td>
+                                <td class="list-account">龙霸天</td>
+                                <td class="list-name">123456789</td>
+                                <td class="list-class">陶瓷紫砂</td>
+                                <!--                                    <td class="list-class">陶瓷紫砂,高古瓷器,明清瓷器,近代民国瓷,建国后及当代瓷器</td>-->
+                                <td class="list-time"><p>开始 2017-12-18 11:20</p><p>结束 2017-12-22 11:55</p></td>
+                                <td class="list-time"><p>开始 2017-12-22 11:55</p><p>结束 2017-12-26 09:05</p></td>
+                                <td class="list-number">5</td>
+                                <td class="list-status">待预展</td>
+                                <td class="list-status">审核通过</td>
+                                <td class="list-status">已排期</td>
+                                <td class="list-status">显示</td>
+                                <td class="list-modify">&nbsp;</td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="page-table-modify">
+                    <div class="page-table-header">
+                        <table class="table table-bordered">
+
+                            <tr>
+                                <th class="list-modify">操作</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                    <div class="page-table-body-outer page-table-fixed-scroll page-table-scroll disScroll">
+                        <div class="page-table-body">
+                            <table class="table table-striped table-bordered table-hover dataTable">
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:539},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:539},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:539},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:539},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:539}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:533},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:533},{&quot;id&quot;:7,&quot;name&quot;:&quot;\u67e5\u770bURL&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:533}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:522},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:522},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:522},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:522},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:522}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:521},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:521},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:521},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:521},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:521}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:519},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:519},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:519},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:519},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:519}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:518},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:518},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:518},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:518},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:518}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:517},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:517},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:517},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:517},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:517}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:516},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:516},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:516},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:516},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:516}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:1,&quot;name&quot;:&quot;\u7f16\u8f91\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:515},{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:515},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:515},{&quot;id&quot;:5,&quot;name&quot;:&quot;\u63d0\u4ea4\u5ba1\u6838&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:515},{&quot;id&quot;:6,&quot;name&quot;:&quot;\u5220\u9664\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:515}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="list-modify">
+                                        <div class="operateBtn">
+                                            <a href="javascript:;" data-events="[{&quot;id&quot;:3,&quot;name&quot;:&quot;\u62cd\u54c1\u7ba1\u7406&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:513},{&quot;id&quot;:4,&quot;name&quot;:&quot;\u9884\u89c8\u4e13\u573a&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:513},{&quot;id&quot;:7,&quot;name&quot;:&quot;\u67e5\u770bURL&quot;,&quot;url&quot;:&quot;url&quot;,&quot;contents&quot;:&quot;contents&quot;,&quot;item_id&quot;:513}]" ><i class="icon-modify"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <ul class="dropdown-menu dropdown-info operateMenu">
+                    <li id="oBtn1">
+                        <a href="####"><i class="icon-11"></i>编辑专场</a>
+                    </li>
+                    <li id="oBtn2">
+                        <a href="####" data-action="reject"><i class="icon-12"></i>驳回原因</a>
+                    </li>
+                    <li id="oBtn3">
+                        <a href="####"><i class="icon-08"></i><!--在线拍-->拍品管理<!--一口价--></a>
+                    </li>
+                    <li id="oBtn4">
+                        <a href="####"><i class="icon-09"></i>预览专场</a>
+                    </li>
+                    <li id="oBtn5">
+                        <a href="####" data-action="submit"><i class="icon-15"></i>提交审核</a>
+                    </li>
+                    <li id="oBtn6">
+                        <a href="####" data-action="del"><i class="icon-16"></i>删除专场</a>
+                    </li>
+                    <li  id="oBtn7">
+                        <a href="####" data-action="url"><i class="icon-10"></i>查看URl</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div><!-- /.page-content -->
+        </div><!-- /.main-content -->
+    </div><!-- /.main-container-inner -->
+</div><!-- /.main-container -->
+<script src="resource/js/zxp.js"></script>
+</body>
+</html>
+
